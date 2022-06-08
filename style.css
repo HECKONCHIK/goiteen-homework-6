@@ -43,6 +43,8 @@ a {
 ul
 {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 html {
     box-sizing: border-box;
@@ -93,19 +95,27 @@ html {
         line-height: 1.1;
         letter-spacing: 0.02em;
     }
-    .header-nav {
+    .header-nav{
+        margin-bottom: 0;
+    }
+    .header-nav, .contact-list {
         display: flex;
         align-items: center;
+        justify-content: flex-start;
         /* align-items: baseline; */
     }
     .nav-list {
         display: flex;
+        margin-left: 93px;
     }
     .nav-list li+li {
         margin-left: 54px;
     }
     .contact-list{
         display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: auto;
     }
     .contact-list li+li {
         margin-left: 50px;
@@ -115,12 +125,9 @@ html {
     .hero-section
     {
         background-color: #2F303A;
-    }
-    .container-hero {
+        text-align: center;
         padding-top: 200px;
         padding-bottom: 200px;
-        padding-left: 452px;
-        padding-right: 452px;
     }
     .hero-title
     {
@@ -132,17 +139,24 @@ html {
         text-align: center;
         letter-spacing: 0.06em;
         text-transform: uppercase;
+        margin-bottom: 30px;
+        margin-top: 0px;
     }
     .hero-button
     { 
         background-color: var(--acent-color);
         color: var(--background-color);
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        width: 200px;
-        height: 50px;
+        display: inline-block;
+        min-width: 200px;
+        padding: 10px 25px;
+        border-radius: 4px;
+        text-decoration: none;
+        box-shadow: rgba(0 0 0 / 15%);
+        margin-top: 0px;
 
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 2px;
     }
     .button-tite
     {
@@ -155,6 +169,16 @@ html {
         margin: auto;
     }
     /* Секція особливості */
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        border: 0;
+        margin: -1px;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
     .specific-title
     {
         color: var(--title-text-color);
@@ -174,8 +198,16 @@ html {
         line-height: 1.7;
         letter-spacing: 0.03em;
     }
+    .features{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    .features-item{
+        width: 270px;
+    }
     /* Секція чим займаємось */
-    .title-about-work
+    .section-title
     {
         color: var(--title-text-color);
         font-style: normal;
@@ -184,6 +216,12 @@ html {
         line-height: 1.2;
         text-align: center;
         letter-spacing: 0.03em;
+        margin-bottom: 50px;
+        margin-top: 0px;
+    }
+    .image{
+        display: flex;
+        justify-content: space-between;
     }
     /* Секція знайомства */
     .title-about-team
