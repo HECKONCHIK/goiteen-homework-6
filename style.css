@@ -224,6 +224,25 @@ html {
         justify-content: space-between;
     }
     /* Секція знайомства */
+    .our-team{
+        background: #F5F4FA;
+    }
+    .team{
+        display: flex;
+        justify-content: space-between;
+    }
+    .team-link{
+        width: 270px;
+        padding-bottom: 30px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+    }
+    .team li+li{
+        margin-left: 30px;
+    }
+    .team-link img{
+        margin-bottom: 30px;
+    }
     .title-about-team
     {
         color: var(--title-text-color);
@@ -243,8 +262,10 @@ html {
         line-height: 1.2;
         text-align: center;
         letter-spacing: 0.03em;
+        margin: 0;
+        margin-bottom: 10px;
     }
-    .description-employee
+    .position-employee
     {
         color: var(--primery-text-color);
         font-style: normal;
@@ -253,6 +274,7 @@ html {
         line-height: 1.2;
         text-align: center;
         letter-spacing: 0.03em;
+        margin: 0;
     }
     /* footer */
 
@@ -265,7 +287,7 @@ html {
         line-height: 1.7;
         letter-spacing: 0.03em;
         display: flex;
-        margin-top: 20px;
+        margin-bottom: 9px;
     }
     .footer
     {
@@ -281,14 +303,20 @@ html {
         letter-spacing: 0.03em;
     }
     .footer-list-item {
-        display: flex;
+        display: flex;    
     }
-    .footer-list-item li+li {
+    .footer-list-item:not(:last-child){
         margin-bottom: 9px;
     }
 /* Portfolio */
 
     /* Filter button */
+    .portfolio-button{
+        display: flex;
+    }
+    .portfolio-button li:not(:last-child){
+        margin-right: 8px;
+    }
     .title-button
     {
         color: var(--title-text-color);
@@ -299,6 +327,15 @@ html {
         text-align: center;
         letter-spacing: 0.03em;
         width: 73px;
+    }
+    .filter-button{
+        display: inline-block;
+        border: 1px solid black;
+        border-radius: 4px;
+        min-width: 73px;
+        height: 38px;
+        padding: 6px 22px;
+        
     }
     /* card */
     .card-title
